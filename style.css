@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*!
+Theme Name: Ignition
+Theme URI: https://ignition.press/
+Author: Eric (Shamai) Greenfield
+Author URI: https://ignition.press/
+Description: Ignition is a starter theme that's made to save you time and let you focus on design and advanced functionality.
+Version: 1.0.0
+License: GNU General Public License v3.0
+
+Text Domain: ignition
+Tags: custom-menu, custom-logo, editor-style, featured-images, footer-widgets
+Commercial License for commercial use
+
+Ignition was created by Eric Greenfield of saltnpixels.com
+Learn more at https://ignition.press
+Ignition v3.2.6
+
+
+
+
+THIS FILE IS UNAFFECTED BY SASS.
+IF YOU NEED TO ADD QUICK STYLES WITHOUT COMPILING, YOU CAN DO SO HERE. AT SOME POINT TRY AND ADD IT BACK INTO THE SASS FILES AND COMPILE WITH NPM START
+
+You can bust the cache of your theme by changing the version above.
+*/

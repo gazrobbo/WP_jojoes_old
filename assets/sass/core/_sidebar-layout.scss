@@ -1,0 +1,142 @@
+/*--------------------------------------------------------------
+# Sidebar Layout
+--------------------------------------------------------------*/
+//If your looking to style the sidebar, go to sidebar.scss
+//this file is for layout only and usually does not need to be touched
+
+
+/*------- Sidebar in panel right layout --------*/
+#panel-right {
+  .sidebar-holder { //the holder with data-moveto attr
+    padding-top: 15px;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    min-width: var(--panel-right-width);
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    @extend .hide-scroll;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# Inline Sidebar #secondary
+--------------------------------------------------------------*/
+
+//hide secondary if empty, like when the sidebar moves to the right panel
+#secondary:empty, .sidebar-holder:empty {
+  display: none;
+}
+
+#secondary .sidebar-holder{
+  max-width: var(--panel-right-width);
+}
+
+/*------- Sidebar on left/right ordering --------*/
+.sidebar-left #secondary {
+  order: 0;
+
+  .sidebar-holder{
+    float: right;
+  }
+}
+
+.sidebar-left #primary {
+  order: 1;
+}
+
+
+.sidebar-holder {
+  position: relative;
+}
+
+
+#secondary .sidebar-holder{
+  height: 100%;
+  display: block;
+}
+
+//fixing some padding issues between the inner container and the outter one
+.sidebar-template{
+  padding: 0 var(--gap); //in case there is no .container on sidebar-template, there must be container-fluid or at least some padding.
+
+
+  .container-content{
+    padding: 0;
+  }
+
+  .entry-header, .page-header{
+    margin: 0 -30px;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Pulling out the header with .header-above
+--------------------------------------------------------------*/
+//by adding class .header-above to .sidebar-template, you can pull the header out of the article and put it above everything, even the sidebar.
+//This is done with javascript. a class active is added when it has finished moving
+//when header-above is found we dont show the sidebar till header has been pulled out. this way it looks seamless and not jumpy.
+
+//when js pulls out header it also adds class active. until that class is added we dont show sidebar, otherwise it jumps strangely
+.js .sidebar-template.header-above:not(.active) {
+  #secondary {
+    display: none;
+  }
+}
+
+//show the header full width even inside container for a split second before it moves out. looks smooth
+.js .sidebar-template.header-above.container:not(.active), .js .sidebar-template.header-above.container-fluid:not(.active){
+  max-width: 100%;
+  padding: 0;
+}
+
+
+
+/*--------------------------------------------------------------
+# Widgets Layout
+--------------------------------------------------------------*/
+.widget {
+
+  h2{
+    margin-top: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    position: relative;
+    margin: 0;
+    color: inherit;
+    transition: all .5s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    a {
+      text-decoration: none;
+      outline: none;
+      padding: 5px 0;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+}
+
+.sidebar-holder .widget {
+  padding: var(--gutters);
+}
+
+.sidebar-holder .widget_nav_menu{
+  padding: var(--gap) 0 var(--gap);
+}
+
+
+
