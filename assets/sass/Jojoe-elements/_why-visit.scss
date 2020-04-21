@@ -1,0 +1,39 @@
+#why-visit {
+	color: var(--main-grey);
+	background-color: var(--main-color);
+
+	h3 {
+    color: var(--main-color);
+    text-transform: unset;
+	}
+}
+
+.why-visit-container {
+	background-color: white;
+	margin: auto;
+	border-radius: 5px;
+  padding: 30px;
+  display: grid;
+  grid-template-areas: 
+  'title image'
+  'text text'
+  ;
+}
+
+.visit-dog {
+  grid-area: image;
+  min-height: 300px;
+width: 300px;
+display: grid;
+place-content: center;
+
+background-color: rgb(206, 217, 246);
+background-color: var(--main-color-light);
+
+border-radius: 44% 56% 0% 100% / 30% 0% 100% 70%;
+padding: 170px 50px 100px 100px;
+}
+
+.visit-paragraph {
+  grid-row: text;
+}

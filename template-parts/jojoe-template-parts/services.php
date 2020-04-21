@@ -1,6 +1,10 @@
 <div id="services">
+<div class="title-container">
 
-<h2 class="color">services</h2>
+  <h2 class="color text-center">services</h2>
+</div>
+
+<div class="services-grid">
 
 <?php query_posts('post_type=services'); ?>
 		<?php
@@ -57,9 +61,9 @@ endwhile; // End of the loop.
   <div class="tail">
   </div>
 </div>
-
+</div>
 		</div>
 
-<button class="hero-button btn-color">get in touch</button>
+<button class="hero-button btn-color">book now</button>
 
 </div>

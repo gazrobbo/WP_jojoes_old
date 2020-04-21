@@ -9,11 +9,11 @@ h6 {
 }
 
 h2 {
-	font-size: 6rem;
+	font-size: 7rem;
 }
 
 h3 {
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 button {
@@ -42,7 +42,25 @@ button {
 }
 
 .color {
-  color: var(--main-color);
+	color: var(--main-color);
+}
+
+h2::after {
+	content: '';
+	display: block;
+	height: 4px;
+	width: 150px;
+	background-color: white;
+}
+
+.title-container {
+	display: inline-block;
+	text-align: center;
+}
+
+
+#services, #about, #reviews, #why-visit {
+	padding: 50px 30px;
 }
 
 

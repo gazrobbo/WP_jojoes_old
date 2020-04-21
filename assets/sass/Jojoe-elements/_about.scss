@@ -1,0 +1,25 @@
+#about {
+  color: white;
+  background-color: var(--main-color);
+}
+
+#about {
+  h2::after {
+    background-color: white;
+    }
+}
+
+#about::before {
+  content: '';
+  background-color: white;
+  border-radius: 50%;
+  width: 150%;
+  min-width: 600px;
+  height: 800px;
+  display: block;
+  position: absolute;
+  left: 30%;
+  opacity: 0.15
+  ;
+
+}

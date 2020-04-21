@@ -2,5 +2,37 @@
 	height: 100vh;
 	min-height: 300px;
 	color: var(--main-grey);
-	text-align: center;
+	
 }
+
+.services-grid {
+	display: grid;
+	grid-template-areas:
+		'groom image bath'
+		'groom image nails'
+	;
+	grid-template-columns: 1fr 275px 1fr;
+	grid-row-gap: 20px;
+}
+
+.service-dog {
+	grid-area: image;
+}
+
+.service-card:nth-child(1) {
+	grid-area: groom;
+}
+
+.service-card {
+	place-self: center;
+}
+
+#services {
+	h2::after {
+		background-color: var(--main-color);;
+		}
+
+		h3 {
+			font-size: 4rem;
+		}
+	}
